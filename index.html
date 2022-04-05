@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./style.css">
+    <title>Jogo da Forca</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jogo da Forca</h1>
+    </header>
+    <main>
+
+        <div id="forca">
+            <img src="./novo-boneco-1/forca-sem-boneco.png" alt="Forca">
+        </div>
+        <div class="info">
+            <div id="iniciarJogo">
+                <button onclick="IniciarJogo()">Iniciar Jogo</button>
+                <select name="opcoes" id="opcoes">
+                    <option value="-1" selected>Escolha Tema</option>
+                    <option value="1">Frutas</option>
+                    <option value="2">Animais</option>
+                    <option value="3">Alimentos</option>
+                    <option value="4">Cores</option>
+                    <option value="5">Objetos</option>
+                    <option value="6">Profissões</option>
+                </select>
+            </div>
+            <div class="campoPalavras">
+                <fieldset class="letras">
+                    <legend>
+                        Palavra
+                    </legend>
+                </fieldset>
+            </div>
+            <div class="campoPalavras">
+                <fieldset class="letrasErradas">
+                    <legend>
+                        Letras erradas
+                    </legend>
+                    <input id="erro1" type="text" maxlength="1" value="" disabled>
+                    <input id="erro2" type="text" maxlength="1" value="" disabled>
+                    <input id="erro3" type="text" maxlength="1" value="" disabled>
+                    <input id="erro4" type="text" maxlength="1" value="" disabled>
+                    <input id="erro5" type="text" maxlength="1" value="" disabled>
+                    <input id="erro6" type="text" maxlength="1" value="" disabled>
+                    <input id="erro7" type="text" maxlength="1" value="" disabled>
+                    <input id="erro8" type="text" maxlength="1" value="" disabled>
+                </fieldset>
+            </div>
+            <div class="campoPalavras">
+                <fieldset class="regrasJogo">
+                    <legend>
+                        Regras do Jogo
+                    </legend>
+                    <p>
+                        O objetivo deste jogo é descobrir qual é a palavra adivinhando as letras que ela possui. O
+                        jogador deve usar o teclado para sugerir uma letra que suspeitem fazer parte da palavra. Caso a
+                        palavra contenha esta letra, será mostrado em que posição(ões) ela está. Entretanto, caso esta
+                        letra não exista na palavra, será desenhada uma parte do corpo do boneco do jogador e aparecera
+                        no campo de palavras erradas. Se o jogador errar as letras 8 vezes, ele perderá o jogo e caso
+                        encontre a palavra ele vencerá
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="./script.js"></script>
+<script src="./palavras.js"></script>
+
+</html>
